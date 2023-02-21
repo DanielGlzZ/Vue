@@ -3,7 +3,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/pokemon'
+    },
+    {
+      path: '/pokemon',
+      name: 'pokemon',
+      component: () => import(/* webpackChunkName: "PokemonLayout"*/'../modules/pokemon/layouts/PokemonLayout')
+
     },
     // { 
     //   path: '/home',
